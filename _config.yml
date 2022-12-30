@@ -4,8 +4,8 @@ description: >
   안녕하세요 
   훌륭한 개발자가 되고 싶은 서산이라고 합니다.
   React를 이용한 web-frontend를 공부 중입니다.
-baseurl: "/jeykllTest/" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository: dannysir/jeykllTest # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+baseurl: "/sanStory/" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository: dannysir/sanStory/ # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: YoussefRaafatNasry/portfolYOU
 open_new_tab: false # Opens external URLs in new tab (works for posts, projects and navbar only)
 
