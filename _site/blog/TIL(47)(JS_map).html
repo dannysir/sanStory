@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TIL Javascript (23)">
+  <meta property="og:description" content="자바스크립트 공부 23일차 map()">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>TIL Javascript (23)</title>
+  <meta name="description" content="자바스크립트 공부 23일차 map()">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>TIL Javascript (23)</b></h1>
+
+<p class="post-metadata text-muted">
+  09 December 2022 -  
+  <b>less than 1 min read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#javascript">
+      <span class="tag badge badge-pill text-primary border border-primary">JavaScript</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#til">
+      <span class="tag badge badge-pill text-primary border border-primary">TIL</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#web">
+      <span class="tag badge badge-pill text-primary border border-primary">Web</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#frontend">
+      <span class="tag badge badge-pill text-primary border border-primary">FrontEnd</span>
+    </a>
+    </p>
+
+<h1 id="2022-12-09-til">2022-12-09 TIL</h1>
+
+<h3 id="map">map()</h3>
+
+<h3 id="매개변수">매개변수</h3>
+
+<hr />
+
+<ul>
+  <li>callback
+    <ul>
+      <li>새로운 배열 요소를 생성하는 함수, 다음 세 가지 인수를 가집니다.</li>
+    </ul>
+  </li>
+  <li>currentValue
+    <ul>
+      <li>처리할 현재 요소</li>
+    </ul>
+  </li>
+  <li>index
+    <ul>
+      <li>처리할 현재 요소의 인덱스</li>
+    </ul>
+  </li>
+  <li>array
+    <ul>
+      <li>map() 을 호출한 배열</li>
+    </ul>
+  </li>
+  <li>thisArg
+    <ul>
+      <li>callback 을 실행할 때 this 로 사용되는 값</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="반환-값">반환 값</h3>
+
+<hr />
+
+<p>배열의 각 요소에 대해 실행한 callback 의 결과를 모은 <strong>새로운 배열</strong></p>
+
+<h3 id="사용-예제">사용 예제</h3>
+
+<hr />
+
+<h3 id="배열에-있는-숫자들의-제곱근을-구하여-새로운-배열을-만들기">배열에 있는 숫자들의 제곱근을 구하여 새로운 배열을 만들기</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">roots</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">);</span>
+<span class="c1">//roots 는 [1, 4, 5]</span>
+<span class="c1">//numbers 는 그대로 유지</span>
+</code></pre></div></div>
+
+<h3 id="map-을-활용해-배열-속-객체를-재구성하기">map 을 활용해 배열 속 객체를 재구성하기</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">kvArray</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="mi">10</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="mi">20</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">key</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="mi">30</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">let</span> <span class="nx">reformattedArray</span> <span class="o">=</span> <span class="nx">kvArray</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">rObj</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="nx">rObj</span><span class="p">[</span><span class="nx">obj</span><span class="p">.</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">rObj</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="c1">// reformattedArray는 [{1:10}, {2:20}, {3:30}]</span>
+
+<span class="c1">// kvArray는 그대로</span>
+<span class="c1">// [{key:1, value:10},</span>
+<span class="c1">//  {key:2, value:20},</span>
+<span class="c1">//  {key:3, value: 30}]</span>
+</code></pre></div></div>
+
+<h3 id="기존-배열에서-각-숫자에-2를-곱하기">기존 배열에서 각 숫자에 2를 곱하기</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">doubles</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="c1">// doubles는 이제 [2, 8, 18]</span>
+<span class="c1">// numbers는 그대로 [1, 4, 9]</span>
+</code></pre></div></div>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

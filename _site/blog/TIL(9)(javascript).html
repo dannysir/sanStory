@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TIL Javascript (7)">
+  <meta property="og:description" content="자바스크립트 공부 7일차 getter와 setter">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>TIL Javascript (7)</title>
+  <meta name="description" content="자바스크립트 공부 7일차 getter와 setter">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>TIL Javascript (7)</b></h1>
+
+<p class="post-metadata text-muted">
+  22 September 2022 -  
+  <b>less than 1 min read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#javascript">
+      <span class="tag badge badge-pill text-primary border border-primary">JavaScript</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#til">
+      <span class="tag badge badge-pill text-primary border border-primary">TIL</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#web">
+      <span class="tag badge badge-pill text-primary border border-primary">Web</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#frontend">
+      <span class="tag badge badge-pill text-primary border border-primary">FrontEnd</span>
+    </a>
+    </p>
+
+<h1 id="2022-09-22-til">2022-09-22 TIL</h1>
+
+<p>###</p>
+
+<h2 id="getter-와-setter">getter 와 setter</h2>
+
+<hr />
+
+<ul>
+  <li>클래스 기반 객체 지향 문법에서는 클래스 내부 변수를 외부에서 어느 범위까지 접근할 수 있을지를 지정하는 문법을 제공
+    <ul>
+      <li>public, private, protected 와 같은 키워드 제공</li>
+      <li>정보 은닉과 캡슐화 컨셉과 관련 있음</li>
+    </ul>
+  </li>
+  <li>
+    <p>javascript 객체 리터럴에서는 이와 유사한 기능으로 getter 와 setter 제공</p>
+
+    <ul>
+      <li>getter와 setter 메서드로 표현</li>
+      <li>메서드를 포함해서, 전체를 프로퍼티라고 할 떄, 프로퍼티를 데이터 프로퍼티 ( 일반적인 프로퍼티), 접근자 프로퍼티 (getter 와 setter)로 나누기도 함</li>
+      <li>getter는 프로퍼티 값을 접근할 때 ( 읽을 때 ) 호출되는 메서드</li>
+      <li>setter는 프로퍼티 값을 수정할 때 ( 설정할 떄 ) 호출되는 메서드</li>
+    </ul>
+  </li>
+  <li>예시</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">SanE</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">age</span> <span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+	<span class="na">hometown</span> <span class="p">:</span> <span class="nx">Seoul</span><span class="p">,</span>
+	<span class="kd">get</span> <span class="nx">get_age</span><span class="p">(){</span>
+			<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="p">;</span>
+			<span class="p">}</span>
+	<span class="kd">set</span> <span class="kd">set</span> <span class="nx">_age</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+			<span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">value</span>
+			<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">SanE</span><span class="p">.</span><span class="nx">get_age</span><span class="p">);</span>
+<span class="nx">SanE</span><span class="p">.</span><span class="nx">set_age</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">SanE</span><span class="p">.</span><span class="nx">get_age</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>결과</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">26</span><span class="p">;</span>
+<span class="mi">27</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="new-object-로-생성하는-방식">new Object() 로 생성하는 방식</h3>
+
+<hr />
+
+<ul>
+  <li>기본 객체인 Object()를 기반으로 생성하는 방식</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">SanE</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
+<span class="nx">SanE</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+<span class="nx">SanE</span><span class="p">.</span><span class="nx">hometown</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Mokdong</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">SanE</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="생성자-함수로-생성하는-방식">생성자 함수로 생성하는 방식</h3>
+
+<hr />
+
+<ul>
+  <li>생성자 함수는 함수를 의미한다.</li>
+  <li>new 함수() 를 쓰면, 객체처럼 사용가능</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">user</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">SanE</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">user</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="dl">"</span><span class="s2">SanE</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">SanE</span><span class="p">.</span><span class="nx">age</span><span class="p">,</span> <span class="nx">SanE</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</code></pre></div></div>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

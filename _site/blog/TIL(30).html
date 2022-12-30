@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="컴퓨터 구조와 프로그래밍">
+  <meta property="og:description" content="컴퓨터 구조와 프로그래밍 - 드모르간의 법칙">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>컴퓨터 구조와 프로그래밍</title>
+  <meta name="description" content="컴퓨터 구조와 프로그래밍 - 드모르간의 법칙">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>컴퓨터 구조와 프로그래밍</b></h1>
+
+<p class="post-metadata text-muted">
+  27 October 2022 -  
+  <b>3 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B5%AC%EC%A1%B0">
+      <span class="tag badge badge-pill text-primary border border-primary">컴퓨터 구조</span>
+    </a>
+    </p>
+
+<h1 id="2022-10-27-til">2022-10-27 TIL</h1>
+
+<h1 id="컴퓨터-구조와-프로그래밍">컴퓨터 구조와 프로그래밍</h1>
+
+<h3 id="드모르간의-법칙">드모르간의 법칙</h3>
+
+<hr />
+
+<p>1800 년대 영국 수학자인 <strong>오거스터스 드모르간</strong>(Augustus De Morgan) 은 불리언 대수에 적용할 수 있는 법칙을 추가로 알아냈다. 이 법칙은 발명자의 이름을 따서 드모르간의 법칙이라고 알려져 있다. 이 법칙은 a AND b라는 연산은 NOT(NOT a OR NOT b)와 같다고 말한다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>a b</th>
+      <th>a AND b</th>
+      <th>NOT a</th>
+      <th>NOT b</th>
+      <th>NOT a OR NOT b</th>
+      <th>NOT (NOT a OR NOT b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F F</td>
+      <td>F</td>
+      <td>R</td>
+      <td>R</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F T</td>
+      <td>F</td>
+      <td>R</td>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T T</td>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>두 번째 열에 있는 a AND b의 결과는 마지막 열에 있는 NOT (NOT a OR NOT b) 연산의 결과와 같다는 사실을 확인하라. 이 말은 NOT 을 충분히 사용하면 AND 연산을 OR 연산으로 대신할 수 있다는 뜻이다. 컴퓨터에서 입력을 항상 원하는 형태로 얻을 수만은 없기 때문에 이런 성질이 유용할 때가 있다. 예를 들어 ‘춥다’와 ‘비가 온다’라는 형식이라면 좋지만, ‘NOT’ 춥다’ 와 ‘NOT 비가 온다’라는 형식일 수도 있다. 영어 등의 자연어에서 이중 부정이 이와 비슷한 일을 한다.</p>
+
+<p>지금까지 살펴본 긍정적인 논리에 더해 부정적인 논리를 기술하는 명세를 사용할 때 드모르간의 법칙을 활용할 수 있다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>춥다</th>
+      <th>비가 온다</th>
+      <th>코트를 입는다</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>긍정적인 논리</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>NOT춥다</th>
+      <th>NOT 비가 온다</th>
+      <th>NOT 코트를 입는다</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>T</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>F</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>T</td>
+      <td>T</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>부정적인 논리</p>
+
+<p>왼쪽에서는 OR 연산을 사용해 결정을 내렸다. 오른쪽에서는 드모르간의 법칙을 활용해서 AND 연산을 사용해 결정을 내렸다. 드모르간의 법칙이 없다면 부정적인 논리를 구현할 때 ‘NOT NOT 춥다 OR NOT NOT 비가 온다’로 OR을 사용해야 했을 것이다. 물론 이런 논리도 제대로 작동하지만 연산을 최소로 사용하면 비용을 최소화할 수 있다. 여기서는 NOT 연산을 수행하는 하드웨어에 실제로 돈이 들기도 하고, 다음 장에서 보겠지만 연산을 연쇄적으로 사용하면 계산이 느려진다.</p>
+
+<p>드모르간의 법칙을 알면 두 번째 표가 표현하는 논리가 ‘춥다 OR 비가 온다’와 동등함을 알 수 있고, 훨씬 간단하게 결과를 계산 할 수 있다.</p>
+
+<h3 id="정수를-비트로-표현하는-방법">정수를 비트로 표현하는 방법</h3>
+
+<hr />
+
+<h3 id="양의-정수-표현">양의 정수 표현</h3>
+
+<p>10진수 체계에서는 10가지 기호인 숫자를 담을 수 있다. 이 때 오른쪽에서 왼쪽으로 상자가 쌓여가며, 상자마다 각기 다른 이름이 붙어 있다. 예를 들어 맨 오른쪽에 있는 상자에는 일의 자리, 오른쪽에서 두 번째 상자에는 십의 자리 세번째는 백의 자리라는 이름이 붙는다. 각 이름은 10의 거듭제곱에 해당한다.</p>
+
+<p>비트를 사용해 값을 만들 떄도 이와 비슷하게 접근할 수 있다. 10진 숫자 대신 비트를 사용하기 때문에 각 상자에 사용할 수 있는 기호는 1과 0 두 가지 밖에 없다. 하지만 기호가 2개뿐이라고 문제가 되지는 않는다. 10진수에서 수를 표현할 수 없을 때는 더 큰 수를 표현하기 위해 상자를 추가할 수 있었다. 예를 들어 9라는 개념적인 수는 한 자리 10진수로 표현이 가능하지만, 10이라는 큰 수를 표현하려면 새로 상자를 추가해야 한다. 가장 오른쪽에 있는 사앚에는 여전히 일의 자리라는 이름이 붙어 있다. 하지만 그 바로 왼쪽 의 상자에는 어떤 이름이 붙어야 할까? ‘2의 자리’가 정답이다. 기호가 10개인 10진수 체계에서 어떤 상자가 표현하는 값은 그 상자에 들어 있는 기호에 해당하는 값에 그 상자의 오른쪽 상자가 차지하는 자릿수에 10을 곱한 값을 곱한 것이다. 2진수에서는 기호가 2개이기 때문에 각 상자는 자신의 오른쪽에 있는 상자의 자릿수에 2를 곱한 값의 자리를 표현한다. 필요한 것은 이게 전부다 각 상자의 자릿수는 2의 거듭 제곱이며, 따라서 2진수 체계는 10을 밑으로 하지 않고 2를 밑으로 하는 수 체계 이다.</p>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

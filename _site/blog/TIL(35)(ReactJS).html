@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ReactJS (2)">
+  <meta property="og:description" content="React - Vamilla JS 로 만든 코드를 React를 이용해서 만들기">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>ReactJS (2)</title>
+  <meta name="description" content="React - Vamilla JS 로 만든 코드를 React를 이용해서 만들기">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>ReactJS (2)</b></h1>
+
+<p class="post-metadata text-muted">
+  03 November 2022 -  
+  <b>4 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#react">
+      <span class="tag badge badge-pill text-primary border border-primary">React</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#javascript">
+      <span class="tag badge badge-pill text-primary border border-primary">Javascript</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#web">
+      <span class="tag badge badge-pill text-primary border border-primary">Web</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#frontend">
+      <span class="tag badge badge-pill text-primary border border-primary">FrontEnd</span>
+    </a>
+    </p>
+
+<h1 id="2022-11-03-til">2022-11-03 TIL</h1>
+
+<h1 id="react">React</h1>
+
+<hr />
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;span&gt;</span>You count 0<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn"</span><span class="nt">&gt;</span>CLick me<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+    <span class="kd">let</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">btn</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">span</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">span</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">function</span> <span class="nx">handleClick</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">counter</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="nx">span</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">`You count </span><span class="p">${</span><span class="nx">counter</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">handleClick</span><span class="p">);</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">btn</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">span</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">span</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">handleClick</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">span</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">`Hello, San`</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Click!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">button</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">handleClick</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>우리는 다음과 같은 방식으로 Javascript를 이용해서 HTML을 작성할 수 있고 addEventListener를 이용해서 특정 이벤트들이 일어 났을 때 반응을 만들 수 있다.</p>
+
+<h3 id="react-1">React</h3>
+
+<hr />
+
+<p>앞에서 말했던 코드를 ReactJS 를 이용하면 다음과 같이 바꿀 수 있다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">span</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">span</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Hello, San</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="na">onClick</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Click!</span><span class="dl">"</span><span class="p">),</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">button</span><span class="dl">"</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>React.createElement 를 이용해서 원하는 태그를 만들고 그 테그 안에 원하는 값들을 넣어 줄 수 있다.</p>
+
+<p>예를 들어서</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"SanE"</span> <span class="na">style=</span><span class="s">"background-color: #191919;"</span><span class="nt">&gt;</span>hello<span class="nt">&lt;/span&gt;</span>
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">span</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+					<span class="na">id</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">SanE</span><span class="dl">"</span><span class="p">,</span> <span class="na">style</span> <span class="p">:</span> <span class="p">{</span><span class="nx">background</span><span class="o">-</span><span class="na">color</span><span class="p">:</span> <span class="err">#</span><span class="mi">191919</span><span class="p">;}</span>
+        <span class="p">},</span> <span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>위의 HTML코드를 아래의 코드로 작성할 수 있다.</p>
+
+<h3 id="jsx">JSX</h3>
+
+<hr />
+
+<p>React에서는 본질적으로 렌더링 로직이 UI 로직(이벤트가 처리되는 방식, 시간에 따라 state가 변하는 방식, 화면에 표시하기 위해 데이터가 준비되는 방식 등)과 연결된다는 사실을 받아들입니다.</p>
+
+<p>React는 별도의 파일에 마크업과 로직을 넣어 <em>기술</em>을 인위적으로 분리하는 대신, 둘 다 포함하는 “컴포넌트”라고 부르는 느슨하게 연결된 유닛으로 관심사를 분리합니다. 이후 섹션에서 다시 컴포넌트로 돌아오겠지만, JS에 마크업을 넣는 게 익숙해지지 않는다면 이 이야기가 확신을 줄 것입니다.</p>
+
+<p>React는 JSX 사용이 필수는 아니지만, 대부분의 사람은 JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 된다고 생각합니다. 또한 React가 더욱 도움이 되는 에러 및 경고 메시지를 표시할 수 있게 해줍니다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+</code></pre></div></div>
+
+<p>위의 코드는 HTML과 매우 유사해 보인다. 이러한 형태가 바로 JSX이며 JAVASCRIPT를 확장한 문법이다. 그렇다면 위에서 봤던 코드를 JSX를 이용해서 바꿔보면 다음과 같다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="p">=</span><span class="s">"SanE"</span> <span class="na">style</span><span class="p">=</span><span class="s">"background-color: #191919;"</span><span class="p">&gt;</span>
+    "hello"
+  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>전체 코드</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;script
+    </span><span class="na">crossorigin</span>
+    <span class="na">src=</span><span class="s">"https://unpkg.com/react@17.0.2/umd/react.production.min.js"</span>
+  <span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script
+    </span><span class="na">crossorigin</span>
+    <span class="na">src=</span><span class="s">"https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"</span>
+  <span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/@babel/standalone/babel.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/babel"</span><span class="nt">&gt;</span>
+    <span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">span</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">span</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Hello, San</span><span class="dl">"</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+      <span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="na">onClick</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Click!</span><span class="dl">"</span><span class="p">),</span>
+      <span class="p">},</span>
+      <span class="dl">"</span><span class="s2">button</span><span class="dl">"</span>
+    <span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">Title</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">onMouseEnter</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Enter</span><span class="dl">"</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="nx">San</span><span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">SanE</span><span class="dl">"</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">Me</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">Container</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Title</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Button</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+    <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Container</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nx">root</span><span class="p">);</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

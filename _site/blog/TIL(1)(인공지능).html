@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TIL 인공지능">
+  <meta property="og:description" content="A quick introduction to the popular JavaScript library.">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>TIL 인공지능</title>
+  <meta name="description" content="A quick introduction to the popular JavaScript library.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>TIL 인공지능</b></h1>
+
+<p class="post-metadata text-muted">
+  08 September 2022 -  
+  <b>less than 1 min read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#python">
+      <span class="tag badge badge-pill text-primary border border-primary">Python</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#ai">
+      <span class="tag badge badge-pill text-primary border border-primary">AI</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#kaggle">
+      <span class="tag badge badge-pill text-primary border border-primary">Kaggle</span>
+    </a>
+    </p>
+
+<p>kaggle 이라는 사이트에서 edit 버튼을 눌러서 내가 수정을 할 수 있고 edit 화면에서 코드 왼쪽에 재생 버튼을 통해 코드를 실행 해 볼 수 있다.</p>
+
+<p>plot을 통해서 그래프에 점으로 나타낼 수 있고 violinplot 이라는 명령어를 통해서 바이올린 형태로 데이터를 보여줄 수 있다. 그렇다면 plot을 통해 데이터를 점으로 나타내고 그것을 선으로 연결해서 우리는 예측을 할 수 있고 violinplot을 이용해서 데이터를 분석 할수 있다.</p>
+
+<p>그리고 우리가 남녀의 키와 몸무게에 대한 CSV 파일이 있다고 했을 때, 그 파일을 plot 으로 나타내면 우리는 남녀를 구분할 수 있는 선을 그릴 수 있다. 그렇게 선을 그어서 우리는 분류를 할 수 있게 된다.</p>
+
+<p>gildong = DecisionTreeClassifier()</p>
+
+<ul>
+  <li>위 코드를 통해서 결정트리 분류기를 사용해 주고</li>
+</ul>
+
+<p>gildong.fit(‘학습용문제’, ‘정답’)</p>
+
+<ul>
+  <li>fit을 이용해서 학습을 시킨다. 학습용문제 -&gt; 정답</li>
+</ul>
+
+<p>prediction = gildong.predict(‘테스트용문제’)</p>
+
+<ul>
+  <li>위에서 학습한 내용을 바탕으로 테스트용 문제의 정답을 예측한다.</li>
+</ul>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Programmers 코딩테스트 (1)">
+  <meta property="og:description" content="2022 KAKAO BLIND RECRUIMENT - 신고메일 접수">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>Programmers 코딩테스트 (1)</title>
+  <meta name="description" content="2022 KAKAO BLIND RECRUIMENT - 신고메일 접수">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Programmers 코딩테스트 (1)</b></h1>
+
+<p class="post-metadata text-muted">
+  28 October 2022 -  
+  <b>4 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#programmers">
+      <span class="tag badge badge-pill text-primary border border-primary">Programmers</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#coding-test">
+      <span class="tag badge badge-pill text-primary border border-primary">Coding Test</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#2022-kakao-blind-recruiment">
+      <span class="tag badge badge-pill text-primary border border-primary">2022 KAKAO BLIND RECRUIMENT</span>
+    </a>
+    </p>
+
+<h1 id="2022-10-28-til">2022-10-28 TIL</h1>
+
+<h2 id="2022-kakao-blind-recruiment">2022 KAKAO BLIND RECRUIMENT</h2>
+
+<h3 id="programmers">programmers</h3>
+
+<h3 id="문제">문제</h3>
+
+<hr />
+
+<p>신입사원 무지는 게시판 불량 이용자를 신고하고 처리 결과를 메일로 발송하는 시스템을 개발하려 합니다. 무지가 개발하려는 시스템은 다음과 같습니다.</p>
+
+<ul>
+  <li>각 유저는 한 번에 한 명의 유저를 신고할 수 있습니다.
+    <ul>
+      <li>신고 횟수에 제한은 없습니다. 서로 다른 유저를 계속해서 신고할 수 있습니다.</li>
+      <li>한 유저를 여러 번 신고할 수도 있지만, 동일한 유저에 대한 신고 횟수는 1회로 처리됩니다.</li>
+    </ul>
+  </li>
+  <li>k번 이상 신고된 유저는 게시판 이용이 정지되며, 해당 유저를 신고한 모든 유저에게 정지 사실을 메일로 발송합니다.
+    <ul>
+      <li>유저가 신고한 모든 내용을 취합하여 마지막에 한꺼번에 게시판 이용 정지를 시키면서 정지 메일을 발송합니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>다음은 전체 유저 목록이 [“muzi”, “frodo”, “apeach”, “neo”]이고, k = 2(즉, 2번 이상 신고당하면 이용 정지)인 경우의 예시입니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>유저 ID</th>
+      <th>유저가 신고한 ID</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“muzi”</td>
+      <td>“frodo”</td>
+      <td>“muzi”가 “frodo”를 신고했습니다.</td>
+    </tr>
+    <tr>
+      <td>“apeach”</td>
+      <td>“frodo”</td>
+      <td>“apeach”가 “frodo”를 신고했습니다.</td>
+    </tr>
+    <tr>
+      <td>“frodo”</td>
+      <td>“neo”</td>
+      <td>“frodo”가 “neo”를 신고했습니다.</td>
+    </tr>
+    <tr>
+      <td>“muzi”</td>
+      <td>“neo”</td>
+      <td>“muzi”가 “neo”를 신고했습니다.</td>
+    </tr>
+    <tr>
+      <td>“apeach”</td>
+      <td>“muzi”</td>
+      <td>“apeach”가 “muzi”를 신고했습니다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>각 유저별로 신고당한 횟수는 다음과 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>유저 ID</th>
+      <th>신고당한 횟수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“muzi”</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>“frodo”</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>“apeach”</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>“neo”</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위 예시에서는 2번 이상 신고당한 “frodo”와 “neo”의 게시판 이용이 정지됩니다. 이때, 각 유저별로 신고한 아이디와 정지된 아이디를 정리하면 다음과 같습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>유저 ID</th>
+      <th>유저가 신고한 ID</th>
+      <th>정지된 ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“muzi”</td>
+      <td>[“frodo”, “neo”]</td>
+      <td>[“frodo”, “neo”]</td>
+    </tr>
+    <tr>
+      <td>“frodo”</td>
+      <td>[“neo”]</td>
+      <td>[“neo”]</td>
+    </tr>
+    <tr>
+      <td>“apeach”</td>
+      <td>[“muzi”, “frodo”]</td>
+      <td>[“frodo”]</td>
+    </tr>
+    <tr>
+      <td>“neo”</td>
+      <td>없음</td>
+      <td>없음</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>따라서 “muzi”는 처리 결과 메일을 2회, “frodo”와 “apeach”는 각각 처리 결과 메일을 1회 받게 됩니다.</p>
+
+<p>이용자의 ID가 담긴 문자열 배열 <code class="language-plaintext highlighter-rouge">id_list</code>, 각 이용자가 신고한 이용자의 ID 정보가 담긴 문자열 배열 <code class="language-plaintext highlighter-rouge">report</code>, 정지 기준이 되는 신고 횟수 <code class="language-plaintext highlighter-rouge">k</code>가 매개변수로 주어질 때, 각 유저별로 처리 결과 메일을 받은 횟수를 배열에 담아 return 하도록 solution 함수를 완성해주세요.</p>
+
+<h3 id="제한사항">제한사항</h3>
+
+<hr />
+
+<h3 id="제한사항-1">제한사항</h3>
+
+<ul>
+  <li>2 ≤ <code class="language-plaintext highlighter-rouge">id_list</code>의 길이 ≤ 1,000
+    <ul>
+      <li>1 ≤ <code class="language-plaintext highlighter-rouge">id_list</code>의 원소 길이 ≤ 10</li>
+      <li><code class="language-plaintext highlighter-rouge">id_list</code>의 원소는 이용자의 id를 나타내는 문자열이며 알파벳 소문자로만 이루어져 있습니다.</li>
+      <li><code class="language-plaintext highlighter-rouge">id_list</code>에는 같은 아이디가 중복해서 들어있지 않습니다.</li>
+    </ul>
+  </li>
+  <li>1 ≤ <code class="language-plaintext highlighter-rouge">report</code>의 길이 ≤ 200,000
+    <ul>
+      <li>3 ≤ <code class="language-plaintext highlighter-rouge">report</code>의 원소 길이 ≤ 21</li>
+      <li><code class="language-plaintext highlighter-rouge">report</code>의 원소는 “이용자id 신고한id”형태의 문자열입니다.</li>
+      <li>예를 들어 “muzi frodo”의 경우 “muzi”가 “frodo”를 신고했다는 의미입니다.</li>
+      <li>id는 알파벳 소문자로만 이루어져 있습니다.</li>
+      <li>이용자id와 신고한id는 공백(스페이스)하나로 구분되어 있습니다.</li>
+      <li>자기 자신을 신고하는 경우는 없습니다.</li>
+    </ul>
+  </li>
+  <li>1 ≤ <code class="language-plaintext highlighter-rouge">k</code> ≤ 200, <code class="language-plaintext highlighter-rouge">k</code>는 자연수입니다.</li>
+  <li>return 하는 배열은 <code class="language-plaintext highlighter-rouge">id_list</code>에 담긴 id 순서대로 각 유저가 받은 결과 메일 수를 담으면 됩니다.</li>
+</ul>
+
+<h3 id="입출력-예">입출력 예</h3>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>id_list</th>
+      <th>report</th>
+      <th>k</th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[“muzi”, “frodo”, “apeach”, “neo”]</td>
+      <td>[“muzi frodo”,”apeach frodo”,”frodo neo”,”muzi neo”,”apeach muzi”]</td>
+      <td>2</td>
+      <td>[2,1,1,0]</td>
+    </tr>
+    <tr>
+      <td>[“con”, “ryan”]</td>
+      <td>[“ryan con”, “ryan con”, “ryan con”, “ryan con”]</td>
+      <td>3</td>
+      <td>[0,0]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="풀이">풀이</h3>
+
+<hr />
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">function</span> <span class="nf">solution</span><span class="p">(</span><span class="n">nameArray</span><span class="p">,</span> <span class="n">reportArray</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">const</span> <span class="n">resultArray</span> <span class="p">=</span> <span class="nf">Array</span><span class="p">(</span><span class="n">nameArray</span><span class="p">.</span><span class="n">length</span><span class="p">).</span><span class="nf">fill</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="c1">//신고받은 횟수</span>
+    <span class="k">const</span> <span class="n">mailArray</span> <span class="p">=</span> <span class="nf">Array</span><span class="p">(</span><span class="n">nameArray</span><span class="p">.</span><span class="n">length</span><span class="p">).</span><span class="nf">fill</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>   <span class="c1">//각 유저가 메일 받은 횟수</span>
+    <span class="k">const</span> <span class="n">answer</span> <span class="p">=</span> <span class="p">[];</span> <span class="c1">// 2번 이상 신고를 받은 유저</span>
+    <span class="k">const</span> <span class="n">newRepoArray</span> <span class="p">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nf">Set</span><span class="p">(</span><span class="n">reportArray</span><span class="p">)];</span>      <span class="c1">//중복을 제외한 신고</span>
+
+<span class="k">for</span><span class="p">(</span><span class="k">let</span> <span class="n">i</span> <span class="n">of</span> <span class="n">newRepoArray</span><span class="p">){</span>
+	  <span class="k">let</span> <span class="n">a</span> <span class="p">=</span> <span class="n">i</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)[</span><span class="m">0</span><span class="p">];</span>   <span class="c1">//신고를 한 유저</span>
+	  <span class="k">let</span> <span class="n">b</span> <span class="p">=</span> <span class="n">i</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)[</span><span class="m">1</span><span class="p">];</span>   <span class="c1">//신고를 받은 유저</span>
+	  <span class="k">let</span> <span class="n">indexB</span> <span class="p">=</span> <span class="n">nameArray</span><span class="p">.</span><span class="nf">indexOf</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="c1">// 신고 받은 유저의 인덱스 번호</span>
+	  <span class="n">resultArray</span><span class="p">[</span><span class="n">indexB</span><span class="p">]</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>  <span class="c1">// 신고 받은 유저의 숫자를 증가</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="n">resultArray</span><span class="p">[</span><span class="n">indexB</span><span class="p">]</span> <span class="p">&gt;=</span> <span class="n">k</span><span class="p">){</span>
+				  <span class="n">answer</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>      <span class="c1">//신고 받은 횟수가 K이상일 때 유저 이름을 배열에 PUSH</span>
+			<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">newRepoArray</span><span class="p">.</span><span class="nf">map</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="n">a</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sc">' '</span><span class="p">)[</span><span class="m">0</span><span class="p">]</span> <span class="c1">//신고한 사람</span>
+  <span class="k">let</span> <span class="n">b</span> <span class="p">=</span> <span class="n">r</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sc">' '</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="c1">//신고 당한 사람</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">answer</span><span class="p">.</span><span class="nf">indexOf</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//만약 2번 이상 신고 당한 배열에 이름이 있을 경우</span>
+    <span class="k">let</span> <span class="n">idx</span> <span class="p">=</span> <span class="n">nameArray</span><span class="p">.</span><span class="nf">indexOf</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>  <span class="c1">//신고한 사람의 인덱스 값을 받</span>
+    <span class="n">mailArray</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>            <span class="c1">// 받은 메일 수 배열에 해당 인덱스 숫자 추가</span>
+  <span class="p">}</span>
+
+<span class="p">})</span>
+    <span class="k">return</span> <span class="n">mailArray</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

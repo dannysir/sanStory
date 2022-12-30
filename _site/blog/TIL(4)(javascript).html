@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TIL Javascript (3)">
+  <meta property="og:description" content="자바스크립트 공부 3일차 자료형과 연산자">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>TIL Javascript (3)</title>
+  <meta name="description" content="자바스크립트 공부 3일차 자료형과 연산자">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>TIL Javascript (3)</b></h1>
+
+<p class="post-metadata text-muted">
+  14 September 2022 -  
+  <b>less than 1 min read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#javascript">
+      <span class="tag badge badge-pill text-primary border border-primary">JavaScript</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#til">
+      <span class="tag badge badge-pill text-primary border border-primary">TIL</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#web">
+      <span class="tag badge badge-pill text-primary border border-primary">Web</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#frontend">
+      <span class="tag badge badge-pill text-primary border border-primary">FrontEnd</span>
+    </a>
+    </p>
+
+<h1 id="2022-09-14-til">2022-09-14 TIL</h1>
+
+<h3 id="데이터타입-변환">데이터타입 변환</h3>
+
+<hr />
+
+<ul>
+  <li>Number()</li>
+</ul>
+
+<p>=Number 타입으로 변환을 해준다.</p>
+
+<blockquote>
+  <p>console.log(typeof Number(”1”) , Number(”1”);</p>
+</blockquote>
+
+<p>-결과</p>
+
+<blockquote>
+  <p>Number 1</p>
+</blockquote>
+
+<ul>
+  <li>parseInt</li>
+</ul>
+
+<p>=Number 타입으로 변환하되 정수형으로 변환한다.</p>
+
+<blockquote>
+  <p>console.log( typeof parseInt(”2.2”), parseInt(”2.2”);</p>
+</blockquote>
+
+<p>-결과</p>
+
+<blockquote>
+  <p>Number 2</p>
+</blockquote>
+
+<ul>
+  <li>parseFloat</li>
+</ul>
+
+<p>= 부동소숫점까지 그대로 변환</p>
+
+<blockquote>
+  <p>console.log( typeof parseFloat(”2.2”), parseFloat(”2.2”);</p>
+</blockquote>
+
+<p>-결과</p>
+
+<blockquote>
+  <p>Number 2.2</p>
+</blockquote>
+
+<ul>
+  <li>String()</li>
+</ul>
+
+<p>=String 타입으로 변환</p>
+
+<blockquote>
+  <p>console.log( typeof String(”0”), String(”0”);</p>
+</blockquote>
+
+<p>-결과</p>
+
+<blockquote>
+  <p>String 0</p>
+</blockquote>
+
+<ul>
+  <li>Boolean()</li>
+</ul>
+
+<p>=Boolean 타입으로 변환</p>
+
+<blockquote>
+  <p>console.log( typeof Boolean(”0”), Boolean(”0”);</p>
+</blockquote>
+
+<p>-결과</p>
+
+<blockquote>
+  <p>boolean true</p>
+</blockquote>
+
+<hr />
+
+<h3 id="동등-연산자---와-일치-연산자--">동등 연산자 ( == )와 일치 연산자 ( ===)</h3>
+
+<hr />
+
+<ul>
+  <li>동등 연산자 ( == , != ) : 관대한 연산자로 기본적으로 값만 같은지를 확인한다.</li>
+  <li>일치 연산자 ( ===, !== ) : 엄격한 연산자로 값과 데이터 타입 모두 같은지 확인한다.</li>
+</ul>
+
+<hr />
+
+<h3 id="주요-연산자">주요 연산자</h3>
+
+<hr />
+
+<ul>
+  <li>
+    <ul>
+      <li>: 덧셈</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>: 뺄셈</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>: 곱셈</li>
+    </ul>
+  </li>
+  <li>/ : 나눗셈</li>
+</ul>
+
+<h3 id="연산자">++연산자</h3>
+
+<p>변수++ : 변수에서 먼저 값을 꺼내고 1을 더함</p>
+
+<p>++변수 : 변수에 1을 더한 값을 꺼냄</p>
+
+<blockquote>
+  <p>let SanE = 1;
+console.log(SanE++ === 2);
+console.log(++SanE ===3);</p>
+</blockquote>
+
+<p>결과</p>
+
+<blockquote>
+  <p>false
+true</p>
+</blockquote>
+
+<h3 id="대입-연산자">대입 연산자</h3>
+
+<ul>
+  <li>=으로 데이터를 변수에 대입할 수 있음</li>
+</ul>
+
+<blockquote>
+  <p>let SanE = 1;
+console.log(SanE);
+SanE += 10;
+console.log(SanE);</p>
+</blockquote>
+
+<p>결과</p>
+
+<blockquote>
+  <p>1
+11</p>
+</blockquote>
+
+<h3 id="논리-연산자">논리 연산자</h3>
+
+<ul>
+  <li>! : NOT</li>
+  <li>&amp;&amp; : AND</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td> </td>
+          <td>: OR</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>예제</li>
+</ul>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

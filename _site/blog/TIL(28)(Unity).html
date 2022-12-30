@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Unity (Unity)">
+  <meta property="og:description" content="Unity 의 구성과 조명">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>Unity (Unity)</title>
+  <meta name="description" content="Unity 의 구성과 조명">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Unity (Unity)</b></h1>
+
+<p class="post-metadata text-muted">
+  25 October 2022 -  
+  <b>less than 1 min read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#unity">
+      <span class="tag badge badge-pill text-primary border border-primary">Unity</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#til">
+      <span class="tag badge badge-pill text-primary border border-primary">TIL</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#game-develop">
+      <span class="tag badge badge-pill text-primary border border-primary">Game Develop</span>
+    </a>
+    </p>
+
+<h1 id="2022-10-25-til">2022-10-25 TIL</h1>
+
+<h1 id="unity">Unity</h1>
+
+<h3 id="유니티의-대표적인-조명">유니티의 대표적인 조명</h3>
+
+<hr />
+
+<ul>
+  <li>
+    <p>점 광원 ( Point Light )</p>
+
+    <ul>
+      <li>정해진 위치에서 사방으로 퍼져나가는 빛</li>
+      <li>물체까지의 거리에 따라 빛의 세기가 감소함</li>
+    </ul>
+  </li>
+  <li>
+    <p>방향성 광원 ( Directional Light )</p>
+
+    <ul>
+      <li>태양광선과 같이 무한히 먼 곳에서 오는 빛
+        <ul>
+          <li>바향만 존재, 어디서든 빛의 세기가 일정</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>스포트라이트 ( Spotlight )</p>
+    <ul>
+      <li>정해진 위치에서 일정 방향으로 퍼져나가는 빛
+        <ul>
+          <li>빛이 방사되는 한계 각도( spot angle ) 존재</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="스크립트">스크립트</h3>
+
+<hr />
+
+<ul>
+  <li>물체가 움직이는 시나리오</li>
+  <li>‘Assets’ → ‘Create’ → ‘C# Script’
+    <ul>
+      <li>처음 생성 시 이름을 확정
+        <ul>
+          <li>이 때 확정된 이름이 클래스명이 됨</li>
+          <li>파일이름과 클래스명이 같아야 유니티가 찾을 수 있음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>스크립트 연결</p>
+
+<ul>
+  <li>스크립트 파일을 드래그해서 Sphere 에 연결, 또는</li>
+  <li>Sphere 선택 후 [Add Component] → ‘Scripts’</li>
+</ul>
+
+<p>스크립트 변수 선언</p>
+
+<ul>
+  <li>스크립트의 루트에서 선언한 public 변수
+    <ul>
+      <li>Inspector 에 나타남
+        <ul>
+          <li>지정된 변수 값을 Inspector 상에서 수정하여 테스트 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>함수 내에서 선언한 변수
+    <ul>
+      <li>지역 변수 : 인스펙터에 나타나지 않음</li>
+    </ul>
+  </li>
+  <li>유니티의 이름 선언 규칙
+    <ul>
+      <li>변수 : 소문자로 시작</li>
+      <li>한수 및 클래스 : 대문자로 시작</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="콘솔">콘솔</h3>
+
+<hr />
+
+<ul>
+  <li>프로그램 실행 시 디버그 및 다양한 메시지가 출력</li>
+  <li>
+    <p>옵션</p>
+
+    <ul>
+      <li>Clear on Play : 실행 시 콘솔창을 지우고 다시 기록</li>
+      <li>Error Pause : 에러가 나면 멈춤</li>
+      <li>Collapse : 같은 종류의 에러를 하나로 표시</li>
+    </ul>
+  </li>
+  <li>디버그</li>
+</ul>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>위 코드를 입력하면 콘솔 화면에 메시지가 뜬다</p>
+
+<h3 id="유니티의-입력시스템">유니티의 입력시스템</h3>
+
+<hr />
+
+<ul>
+  <li>[Edit] → [Project Setting] → [Input]</li>
+  <li>마우스 버튼
+    <ul>
+      <li>mouse 0 : 왼쪽 버튼</li>
+      <li>mouse 1 : 오른쪽 버튼</li>
+      <li>mouse 2 : 가운데 버튼</li>
+    </ul>
+  </li>
+  <li>매 프레임마다 호출되는 Update()에서 처리
+    <ul>
+      <li>키를 언제 누르더라도 대응 가능하도록</li>
+    </ul>
+  </li>
+  <li>Input 클래스
+    <ul>
+      <li>사용자의 키 입력을 판정하는 클래스
+        <ul>
+          <li>Input.GetAxis(”Horizontal”) : 좌우 이동키의 이동 방향</li>
+          <li>Input.GetAxis(”Vertical”) : 앞뒤 이동키의 이동 방향</li>
+          <li>Input.GetKeyDown() : 특정 키를 눌렀는지 여부</li>
+          <li>Input.GetButtonDown() : 특정한 키나 버튼을 눌렀는 지 여부</li>
+          <li>Input.GetMouseButtonDown() : 마우스버튼을 눌렀는 지 여부</li>
+          <li>Input.GetTouch() : 터치스크린 화면을 눌렀는지 여부</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<div class="pt-5">
+  
+</div>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

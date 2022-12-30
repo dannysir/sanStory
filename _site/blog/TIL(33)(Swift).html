@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Swift 공부 (01)">
+  <meta property="og:description" content="These four “clean code” tips will dramatically improve your engineering team’s productivity">
+  <meta property="og:image" content="https://i.ibb.co/gwW0nK3/IMG-1877.jpg">
+
+  <title>Swift 공부 (01)</title>
+  <meta name="description" content="These four “clean code” tips will dramatically improve your engineering team’s productivity">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/jeykllTest/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/jeykllTest/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/jeykllTest/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/jeykllTest//"><h5><b>San'story</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/jeykllTest/projects/">Projects</a>
+
+      <a class="nav-item nav-link active" href="/jeykllTest/blog/">Blog</a>
+
+      <a class="nav-item nav-link " href="/jeykllTest/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1><b>Swift 공부 (01)</b></h1>
+
+<p class="post-metadata text-muted">
+  01 November 2022 -  
+  <b>4 mins read time</b>
+
+  <br>Tags: 
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#swift">
+      <span class="tag badge badge-pill text-primary border border-primary">Swift</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#app-develop">
+      <span class="tag badge badge-pill text-primary border border-primary">App Develop</span>
+    </a>
+    
+    <a class="text-decoration-none no-underline" href="/jeykllTest/blog/tags#ios">
+      <span class="tag badge badge-pill text-primary border border-primary">IOS</span>
+    </a>
+    </p>
+
+<h1 id="2022-11-01-til">2022-11-01 TIL</h1>
+
+<h2 id="스위프트-공부">스위프트 공부</h2>
+
+<p>스위프트 프로그래밍(3판)(한빛미디어)(야곰지음)</p>
+
+<h3 id="스위프트-기초">스위프트 기초</h3>
+
+<hr />
+
+<p>애플은 ios, macOS, tvOS 등 자사의 제품 개발에 활용하고자 새 프로그래밍 언어인 스위프트를 만들었다. 스위프트는 안전을 우선으로 하는 프로그래밍 패턴을 지향하며, 더욱 쉽고 재미있게 프로그래밍할 수 있도록 옵셔널, 제네릭, 프로토콜, 튜플, 익스텐션 등 새로운 가능을 많이 도입했다. 현재 애플은 스위프트를 오픈소스로 공유했으므로 애플 플랫폼 외에 다양한 플랫폼에서 사용할 수 있다.</p>
+
+<p>스위프트는 편리하며 고차원적 언어입니다. 먼저, ARC를 지원하므로 쉽게 메모리를 관리할 수 있습니다. 또한 Objective-C 기존 언어에 익숙하다면 더욱 쉽게 스위프트를 익힐 수 있습니다.</p>
+
+<p>Objective-C의 동적 객체 모델과 매개변수 형식을 스위프트에 도입했기 때문이다. 더불어 스크립트 언어처럼 프로그램을 빌드하고 실행하는 등의 수고로움 없이 플레이 그라운드를 사용해 스위프트 코드의 결과를 바로 확인할 수도 있습니다. 이처럼 스위프트는 최신 언어의 철학을 결합한 산물이며, 컴파일러의 성능은 프로그램 실행 속도 향상 및 빌드 시간 단축에 최적화 되어 있습니다.</p>
+
+<p>기존에 다른 프로그래밍 언어를 사용하던 프로그래머라면 스위프트의 문법이 다소 생소할 수도 있습니다. 스위프트의 거의 모든 문법에서 소괄호(())는 사용하거나 생략해도 무관합니다. 또한 세미클론(;)도 생략할 수 있습니다. 다만 줄관호는 생략할 수 없습니다. 그때문에 프로그래머마다 전혀 다른 스타일로 코딩할 수 있습니다. 좋은 의미로 보자면 자신이 원하는 방식대로 자유롭게 코딩할 수 있다는 뜻이지만, 다른 사람의 코드를 읽기 어려울 수 있다는 단점이 있기도 합니다. <strong>즉, 스위프트는 언어의 자유도가 높아서 작성자의 스타일에 따라 다양한 방식으로 코딩할 수 있지만 한편으로 가독성이 떨어질 수 있으므로 주의가 필요합니다.</strong></p>
+
+<h3 id="스위프트의-언어적-특성">스위프트의 언어적 특성</h3>
+
+<hr />
+
+<h3 id="안전성">안전성</h3>
+
+<ul>
+  <li>스위프트는 안전한 프로그래밍을 지향합니다. 소프트웨어가 배포되기 전, 즉 프로그래밍하는 중에 프로그래머가 저지를 수 있는 실수를 엄격한 문법을 적용해 미연에 방지하고자 노력했습니다. 때론 너무 강제적이라고 느껴질 수 있지만 문법적 제재는 실수를 줄이는 데 도움이 됩니다. 버그를 수정하거나 실수를 찾아내는 시간을 절약할 수 있습니다. 옵셔널이라는 기능을 비롯하여 guard 구문, 오류처리, 강력한 타입 통제 등을 통해 스위프트는 안전한 프로그래밍을 구현하고 있습니다.</li>
+</ul>
+
+<h3 id="신속성">신속성</h3>
+
+<ul>
+  <li>스위프트는 C 언어를 기반으로 한 C, C++, Object-C와 같은 프로그래밍 언어를 대체하려는 목적으로 만들어졌습니다. 아직은 미흡한 부분도 있지만 스위프트는 C 언어 수준과 동등한 성능을 일정한 수준으로 유지하는 데 초점을 맞춰 개발되었습니다. 실행 속도의 최적화뿐만 아니라 컴파일러를 지속적으로 개량해 더 빠른 컴파일 성능을 구현해 나가고 있기도 합니다.</li>
+</ul>
+
+<h3 id="표현성">표현성</h3>
+
+<ul>
+  <li>컴퓨터 과학 분야의 발전과 함께 성장한 수많은 프로그래밍 언어 각각의 문법은 다양한 장단점이 있습니다. 스위프트는 이런 장단점을 참고해 좀 더 사용하기 편하고 보기 좋은 문법을 구현하려 노력했습니다. 덕분에 개발자들이 원하던 현대적이고 세련된 문법을 구사할 수 있습니다. 그러나 지금의 스위프트가 끝이 아닙니다. 계속된 업데이트를 통해 더욱 보기 좋고 쓰기 좋은 언어로 발전해 나갈 것입니다.</li>
+</ul>
+
+<p>애플이 발표한 세가지 특징 외에도 스위프트는 많은 특징이 있습니다. 그중에 프로그래밍 패러다임에 대해 조금 더 설명하겠습니다. 스위프트는 여러 가지 프로그래밍 페러다임을 차용한 다중 페러다임 프로그래밍 언어입니다. 크게 보면 명령형 프로그래밍 패러다임, 객체지향 프로그래밍 패러다임, 함수형 프로그래밍 패러다임, 프로토콜 지향 프로그래밍 패러다임을 차용했습니다. 정확하게는 명령형과 객체지향 프로그래밍 패러다임을 기반으로 한 함수형 프로그래밍 패러다임과 프로토콜 지향 프로그래밍 패러다임을 지향합니다.</p>
+
+<p>결과적으로 스위프트에서 가장 강조하는 부분은 함수형 프로그래밍 패러다임과 프로토콜 지향 프로그래밍 패러다임입니다.</p>
+
+<h3 id="객체지향">객체지향</h3>
+
+<hr />
+
+<h3 id="객체지향-프로그래밍-패러다임">객체지향 프로그래밍 패러다임</h3>
+
+<p>객체지향 프로그래밍은 프로그램을 유연하고 쉽게 변경할 수 있도록 작성할 수 있어 대규모 소프트웨어 개발에 많이 사용됩니다. 또한 객체만 잘 이해하면 프로그래밍을 더 쉽게 배울 수 있고, 소프트웨어 개발과 유지보수를 간편하게 할 수 있으며, 직관적으로 코드를 분석할 수 있다는 장점이 있습니다. 그러나 객체지향 프로그래밍은 실제 세계의 모습을 프로그램 안에 구현하고자 했지만 지나친 프로그램의 객체화 경향 때문에 오히려 실제 세계의 모습을 그대로 반영하기 어렵다는 비판을 받기도 합니다.</p>
+
+<h3 id="클래스와-객체">클래스와 객체</h3>
+
+<ul>
+  <li>클래스 : 같은 종류의 집단에 속하는 속성과 행위를 정의한 것입니다. 객체지향 프로그램의 기본 사용자 정의 데이터 타입이라고 할 수 있습니다. 클래스는 다른 클래스 또는 외부 요소와 독립적으로 디자인되어야 합니다.</li>
+  <li>객체 : 클래스의 인스턴스 (실제로 메모리에 할당되어 동작하는 모양을 갖춘 것, instance) 입니다. 객체는 자신 고유의 속성이 있으며 클래스에서 정의한 행위를 할 수 있습니다. 스위프트에서는 ‘객체’라는 용어보다는 ‘클래스의 인스턴스’ 라는 표현을 사용합니다.</li>
+  <li>메서드 또는 메시지 : 객체가 클래스에 정의된 행위를 실질적으로 하는 함수입니다. 메서드를 통해 객체에 명령을 전달할 수 있습니다. 객체 간에 명령 전달 또는 데이터전달은 메서드를 통해 이루어지며 명령을 전달하거나 데이터를 전달하는 행위를 ‘메서드를 호출한다’ 또는 ‘메시지를 전달한다.’라고 표현합니다.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">SomeClass</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">someProperty</span><span class="p">:</span> <span class="kt">Any</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="kd">func</span> <span class="nf">someMethod</span><span class="p">(){</span>
+		<span class="c1">//작업</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">myInstance</span><span class="p">:</span> <span class="kt">SomeClass</span> <span class="o">=</span> <span class="kt">SomeClass</span><span class="p">()</span>
+<span class="c1">// SomeClass 라는 이름의 클래스의 이니셜라이저를 호출하여</span>
+<span class="c1">//myInstance라는 이름의 상수에 할당합니다.</span>
+<span class="c1">//클래스의 이니셜라이저를 통해 메모리에 할당되고 초기화한 객체를 우리는 인스턴스라고 부른다.</span>
+
+<span class="n">myInstance</span><span class="o">.</span><span class="n">someProperty</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">//인스턴스의 프로퍼티에 값을 할당할 수도 있고</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">myInstance</span><span class="o">.</span><span class="n">someProperty</span><span class="p">)</span> <span class="c1">//값을 가져올 수도 있다.</span>
+
+<span class="n">myInstance</span><span class="o">.</span><span class="nf">someMethod</span><span class="p">()</span> <span class="c1">// 인스턴스의 메서드를 호출하여 작업을 수행하도록 할 수 있다.</span>
+</code></pre></div></div>
+
+<p>코드를 보면 알 수 있듯이 스위프트 뿐만 아니라 객체지향 프로그래밍 페러다임을 차용한 언어는 필수로 명령형 프로그래밍 패러다임을 사용합니다. 프로퍼티, 변수 등에 해당하는 메모리 값의 변화가 있기 때문이빈다.</p>
+
+<p>클래스는 객체가 만들어지기 위한 청사진으로 비유할 수 있습니다. 클래스는 실제 메모리에 객체를 할당해 인스턴스를 만들기 위한 일종의 설계코드입니다. 클래스에 구현된 코드대로 실제로 객체가 메모리에 올라가 활동하게 됩니다. 클래스에 정의된 모양대로 객체가 생성되고 객체간의 메시지를 통해 프로그램의 각 명령이 실행됩니다.</p>
+
+<p>###</p>
+
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Seo San</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:dannysir@naver.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/dannysir0105"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/dannysir"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/Seo.San"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#405de6'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+- name: Communication
+  percentage: 100
+  color: danger
+
+- name: Adobe XD
+  percentage: 80
+  color: warning
+
+- name: Git & Github
+  percentage: 80
+  color:
+
+- name: Unity
+  percentage: 67
+  color: success
