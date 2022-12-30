@@ -1,5 +1,5 @@
 ---
-title: Programmers 코딩테스트 (14)
+title: Programmers 코딩테스트 (15)
 tags: [Programmers, Coding Test]
 style: fill
 color: light
