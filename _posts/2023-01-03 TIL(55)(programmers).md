@@ -1,5 +1,5 @@
 ---
-title: Programmers 2021 카카오 채용연계형 인턴십 (16)
+title: 2021 카카오 채용연계형 인턴십 (16)
 tags: [Programmers, Coding Test, 2021 카카오 채용연계형 인턴십]
 style: fill
 color: light
