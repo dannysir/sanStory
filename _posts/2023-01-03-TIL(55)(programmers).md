@@ -1,9 +1,9 @@
 ---
-title: 2021 카카오 채용연계형 인턴십 (16)
+title: Programmers 코딩테스트 (16)
 tags: [Programmers, Coding Test, 2021 카카오 채용연계형 인턴십]
 style: fill
 color: light
-description: programmers - 숫자 문열과 영단어 - 문제 풀이
+description: 2021 카카오 채용연계형 인턴십 - 숫자 문열과 영단어
 ---
 
 # 2023-01-03 TIL
