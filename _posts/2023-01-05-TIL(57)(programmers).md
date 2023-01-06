@@ -10,7 +10,11 @@ description: 2019 KAKAO BLIND RECRUITMENT - 실패율
 
 ## programmers
 
+---
+
 ### • 실패율
+
+---
 
 ### **문제 설명**
 
