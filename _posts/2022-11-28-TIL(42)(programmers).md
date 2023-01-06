@@ -8,7 +8,7 @@ description: programmers - 정수 제곱근 판별 - 문제 풀이
 
 # 2022-11-28 TIL
 
-## programmers
+<br/>
 
 ### 정수 제곱근 판별
 

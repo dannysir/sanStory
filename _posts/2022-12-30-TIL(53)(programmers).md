@@ -8,7 +8,7 @@ description: programmers - 최댓값 최솟값 - 문제 풀이
 
 # 2022-12-30 TIL
 
-## programmers
+<br/>
 
 ### • 최댓값 최솟값
 

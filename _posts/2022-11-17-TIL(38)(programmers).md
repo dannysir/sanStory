@@ -8,7 +8,7 @@ description: programmers - 자연수 뒤집어 배열로 만들기 - 문제 풀�
 
 # 2022-11-17 TIL
 
-## programmers
+<br/>
 
 ### 자연수 뒤집어 배열로 만들기
 

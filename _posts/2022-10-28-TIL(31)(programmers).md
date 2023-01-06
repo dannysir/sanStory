@@ -8,6 +8,8 @@ description: 2022 KAKAO BLIND RECRUIMENT - 신고메일 접수
 
 # 2022-10-28 TIL
 
+<br/>
+
 ## 2022 KAKAO BLIND RECRUIMENT
 
 ### programmers

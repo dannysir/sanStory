@@ -8,7 +8,7 @@ description: programmers - 콜라츠 추측 - 문제 풀이
 
 # 2022-11-18 TIL
 
-## programmers
+<br/>
 
 ### 나누어 떨어지는 숫자 배열
 

@@ -8,7 +8,7 @@ description: programmers - 핸드폰 번호 가리기 - 문제 풀이
 
 # 2022-11-11 TIL
 
-## programmers
+<br/>
 
 ### 핸드폰 번호 가리기
 

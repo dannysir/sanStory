@@ -8,6 +8,8 @@ description: 자바스크립트 공부 22일차 reduce()
 
 # 2022-12-08 TIL
 
+<br/>
+
 ### reduce()
 
 ### 매개변수

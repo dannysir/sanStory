@@ -5,9 +5,10 @@ style: fill
 color: light
 description: programmers - 폰켓몬 - 문제 풀이
 ---
+
 # 2022-12-15 TIL
 
-## programmers
+<br/>
 
 ### 폰켓몬
 
@@ -39,11 +40,11 @@ description: programmers - 폰켓몬 - 문제 풀이
 
 ---
 
-| nums | result |
-| --- | --- |
-| [3,1,2,3] | 2 |
-| [3,3,3,2,2,4] | 3 |
-| [3,3,3,2,2,2] | 2 |
+| nums          | result |
+| ------------- | ------ |
+| [3,1,2,3]     | 2      |
+| [3,3,3,2,2,4] | 3      |
+| [3,3,3,2,2,2] | 2      |
 
 ### 입출력 예 설명
 
@@ -61,10 +62,10 @@ description: programmers - 폰켓몬 - 문제 풀이
 
 ```jsx
 function solution(nums) {
-    var answer = 0;
-		//Set() 을 이용하여 중복된 배열 값 정리
-    const arr = [...new Set(nums)];
-		// 삼항 연산자를 이용하여 N/2 의 갯수가 폰켓몬 종류 수보다 큰 경우와 작은 경우로 나눈다.
-    return (nums.length/2 <= arr.length ? nums.length/2 : arr.length);
+  var answer = 0;
+  //Set() 을 이용하여 중복된 배열 값 정리
+  const arr = [...new Set(nums)];
+  // 삼항 연산자를 이용하여 N/2 의 갯수가 폰켓몬 종류 수보다 큰 경우와 작은 경우로 나눈다.
+  return nums.length / 2 <= arr.length ? nums.length / 2 : arr.length;
 }
 ```

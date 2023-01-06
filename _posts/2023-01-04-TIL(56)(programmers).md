@@ -5,9 +5,10 @@ style: fill
 color: light
 description: programmers - 체육복(Greedy) - 문제풀이
 ---
+
 # 2023-01-04 TIL
 
-## programmers
+<br/>
 
 ### • 체육복
 
@@ -32,11 +33,11 @@ description: programmers - 체육복(Greedy) - 문제풀이
 
 ---
 
-| n | lost | reserve | return |
-| --- | --- | --- | --- |
-| 5 | [2, 4] | [1, 3, 5] | 5 |
-| 5 | [2, 4] | [3] | 4 |
-| 3 | [3] | [1] | 2 |
+| n   | lost   | reserve   | return |
+| --- | ------ | --------- | ------ |
+| 5   | [2, 4] | [1, 3, 5] | 5      |
+| 5   | [2, 4] | [3]       | 4      |
+| 3   | [3]    | [1]       | 2      |
 
 ### 입출력 예 설명
 
@@ -52,48 +53,47 @@ description: programmers - 체육복(Greedy) - 문제풀이
 
 ```jsx
 function solution(n, lost1, reserve1) {
+  // n개의 1 값을 갖는 배열 생성
+  let stuArr = Array(n).fill(1);
+  let answer = 0;
 
-		// n개의 1 값을 갖는 배열 생성
-    let stuArr = Array(n).fill(1);
-    let answer = 0;
+  // 이미 여분을 주었을 경우
+  let max = n + 3;
 
-		// 이미 여분을 주었을 경우
-    let max = n + 3;
+  //배열 정렬
+  let lost = lost1.sort((a, b) => a - b);
+  let reserve = reserve1.sort((a, b) => a - b);
 
-		//배열 정렬
-    let lost = lost1.sort((a,b) => a-b);
-    let reserve = reserve1.sort((a,b) => a-b);
+  // 만약 도난 당했다면 0
+  // 도난 당했는데 여분이 있다면 1
+  for (let i = 0; i < lost.length; i++) {
+    stuArr[lost[i] - 1] = 0;
+    for (let j = 0; j < reserve.length; j++) {
+      if (lost[i] == reserve[j]) {
+        stuArr[lost[i] - 1] = 1;
+        reserve[j] = max;
+      }
+    }
+  }
 
-		// 만약 도난 당했다면 0
-		// 도난 당했는데 여분이 있다면 1
-    for (let i = 0; i < lost.length; i++) {
-      stuArr[lost[i] - 1] = 0;
-      for (let j = 0; j < reserve.length; j++) {
-        if (lost[i] == reserve[j]) {
-          stuArr[lost[i] - 1] = 1;
-          reserve[j] = max;
-        }
+  // 사이즈가 1 차이 나는 여분이 있다면 1로 바꿔주고
+  // reserve 배열의 해당 수를 max로
+  for (let i = 0; i < stuArr.length; i++) {
+    for (let j = 0; j < reserve.length; j++) {
+      if (stuArr[i] == 0 && reserve[j] + 1 == i + 1) {
+        stuArr[i] = 1;
+        reserve[j] = max;
+      } else if (stuArr[i] == 0 && reserve[j] - 1 == i + 1) {
+        stuArr[i] = 1;
+        reserve[j] = max;
       }
     }
 
-		// 사이즈가 1 차이 나는 여분이 있다면 1로 바꿔주고 
-		// reserve 배열의 해당 수를 max로
-    for (let i = 0; i < stuArr.length; i++) {
-      for (let j = 0; j < reserve.length; j++) {
-        if (stuArr[i] == 0 && reserve[j] + 1 == i + 1) {
-          stuArr[i] = 1;
-          reserve[j] = max;
-        } else if (stuArr[i] == 0 && reserve[j] - 1 == i + 1) {
-          stuArr[i] = 1;
-          reserve[j] = max;
-        }
-      }
-
-			//answer 갯수 
-      if (stuArr[i] == 1) {
-        answer += 1;
-      }
+    //answer 갯수
+    if (stuArr[i] == 1) {
+      answer += 1;
     }
-    return answer;
+  }
+  return answer;
 }
 ```
