@@ -3,7 +3,7 @@ title: Programmers 코딩테스트 (23)
 tags: [Programmers, Coding Test, Lv2, 효율성테스트 에러]
 style: fill
 color: light
-description: programmers LV2 - 최솟값 만들기
+description: programmers LV2 - 최솟값 만들기(효율성 테스트 에러)
 ---
 
 # 2023-01-12 TIL
