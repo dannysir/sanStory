@@ -1,8 +1,8 @@
 ---
-title: Programmers 코딩테스트 (24)
+title: 파일 수정 중 !!!!!
 tags: [Programmers, Coding Test, Lv3, IMOS]
 style: fill
-color: light
+color: danger
 description: programmers LV2 - 파괴되지 않은 건물(IMOS 알고리즘)
 ---
 
